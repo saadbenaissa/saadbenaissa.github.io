@@ -1,0 +1,807 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: "roboto cn", sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: rgba(160, 159, 159, 0.445);
+}
+body {
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+    color: #eee;
+}
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p {
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+.section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+.brand h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+.brand h1 span {
+    color: rgb(160, 59, 218);
+}
+.section-title span {
+    color:  rgb(160, 59, 218);
+}
+.knop {
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid  rgb(160, 59, 218);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-top: 30px;
+    transition: .5s ease background-color;
+}
+.knop:hover {
+    background-color:  rgb(160, 59, 218);
+}
+/* Header */
+#header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+#header .header {
+    min-height: 8vh;
+    background-color: rgba(31, 30, 30, 0.884);
+    transition: .3s background-color;
+}
+#header .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+}
+#header .nav-list ul {
+    list-style: none;
+    position: absolute;
+    background-color: rgb(31,30,30);
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .5s left;
+}
+#header .nav-list ul.active {
+    left: 0;
+}
+#header .nav-list ul a {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+#header .nav-list ul a::after {
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: rgba(0, 0, 0, 0.842);
+    font-size: 13rem;
+    letter-spacing: 30px;
+    z-index: -1;
+    transition: .3s letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+    transform: translate(-50%, -50%) scale(1);
+    letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+    color:  rgb(160, 59, 218);
+}
+#header .hamburger {
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(.8);
+    margin-right: 10px;
+}
+#header .hamburger .bar {
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background-color: white;
+    z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    transition: .3s;
+    transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+    top: 8px;
+}
+#header .hamburger .bar::before {
+    bottom: 8px;
+}
+#header .hamburger.active .bar::after {
+    top: 0;
+}
+#header .hamburger.active .bar::before {
+    bottom: 0;
+}
+/* Einde Header */
+/* Welkom section */
+#welkom {
+    background: url(images/background.jpg) top center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+#welkom::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: -1;
+    opacity: .5;
+}
+#welkom .welkom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+#welkom h1 {
+    display: block;
+    width: fit-content;
+    font-family: 'Dosis' sans-serif;
+    font-size: 40px;
+    position: relative;
+    color: transparent;
+    animation: text_reveal1 .5s ease forwards;
+    animation-delay: 1.5s;
+}
+#welkom h1:nth-child(1){
+    animation-delay: .9s;
+}
+#welkom h1:nth-child(2){
+    animation-delay: 1.6s;
+}
+#welkom h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color:  rgb(160, 59, 218);
+    animation: text_reveal 1s ease;
+    animation-delay: 1s;
+}
+#welkom h1:nth-child(1) span {
+    animation-delay: .3s;
+}
+#welkom h1:nth-child(2) span {
+    animation-delay: 1s;
+}
+/* Einde Welkom */
+/* Projecten */
+#projecten h3 {
+    position: relative;
+    top: 122px;
+    left: 150px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+#projecten .projecten {
+    flex-direction: column;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#projecten .projecten-top {
+    max-width: 500px;
+    margin: 0 auto;
+}
+#projecten .projecten-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+#projecten .projecten-item {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 10px auto;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    height: 200px;
+    width: 400px;
+    transition: .3s;
+}
+#projecten a {
+    padding: 15px;
+}
+#projecten #technowire {
+    background-image: url(images/TechnoWire.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#projecten #radiogaga {
+    background-image: url(images/Radiogaga.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#projecten #grid {
+    background-image: url(images/grid.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#projecten #mbo_utrecht {
+    background-image: url(images/mboutrecht.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#projecten .projecten-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .6;
+    z-index: -1;
+}
+#projecten .projecten-item h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+}
+#projecten .projecten-item p {
+    color: white;
+    text-align: left;
+}
+#projecten .projecten-item:hover {
+    transform: scale(1.1);
+    opacity: 0.6;
+    transition: .3s;
+}
+/* Einde Projecten */
+/* Reflectie */
+#reflectie .reflectie {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#reflectie .reflectie-top h1{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+#reflectie .all-reflectie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#reflectie .reflectie-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#reflectie .reflectie-info {
+    padding: 30px;
+    flex-basis: 50%;
+    background: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+#reflectie .reflectie-info h1 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+#reflectie .reflectie-info h2 {
+    font-size: 2.3rem;
+    font-weight: 500;
+    margin-top: 10px;
+    color:  rgb(160, 59, 218);
+}
+#reflectie .reflectie-info p {
+    color: white;
+}
+#reflectie .reflectie-img {
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+#reflectie .reflectie-img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(60deg, #485563 0%, #485563 100%);
+    opacity: .7;
+}
+#reflectie .reflectie-img img {
+    transition: .3s transform;
+}
+#reflectie .reflectie-item:hover .reflectie-img img {
+    transform: scale(1.1);
+    transition: .3s;
+}
+/* Einde Reflectie */
+/* About */
+#about .about {
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+#about .col-left {
+    width: 250px;
+    height: 360px;
+}
+#about .col-right {
+    width: 100%;
+}
+#about .col-right h2 {
+    font-size: 1.8rem;
+    font-weight: 500%;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+#about .col-right p {
+    margin-bottom: 20px;
+}
+#about .knop {
+    color: black;
+}
+#about .col-left .about-img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 10px solid darkgrey;
+}
+#about .col-left .about-img::after {
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid rgb(160, 59, 218);
+    z-index: -1;
+}
+/* Einde About */
+/* Contact */
+#contact button, input {
+    font-weight: 700;
+    letter-spacing: 1.4;
+}
+#contact {
+    display: flex;
+    min-height: 80vh;
+}
+.container1 {
+    flex: 0 1 800px;
+    margin: 100px auto;
+    padding: 10px;
+}
+.screen {
+    position: relative;
+    background-color: #3e3e3e;
+    border-radius: 15px;
+}
+.screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    z-index: -1;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+.screen-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4d4d4f;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.screen-header-left {
+    margin-right: auto;
+}
+.screen-header-button {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+.screen-header-button.close {
+    background-color: #ed1c6f;
+}
+.screen-header-button.maximize {
+    background-color: #e8e925;
+}
+.screen-header-button.minimize {
+    background-color: #74c54f;
+}
+.screen-header-right {
+    display: flex;
+}
+.screen-header-ellipsis {
+    width: 3px;
+    height: 3px;
+    margin-left: 2px;
+    border-radius: 8px;
+    background-color: #999;
+}
+.screen-body {
+    display: flex;
+}
+.screen-body-item {
+    flex: 1;
+    padding: 50px;
+}
+.screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+}
+.app-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color:  rgb(160, 59, 218);
+    font-size: 26px;
+}
+.app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background-color:  rgb(160, 59, 218);
+}
+.app-contact {
+    margin-top: auto;
+    font-size: 11px;
+    color: #888
+}
+.app-form-group {
+    margin-bottom: 15px;
+}
+.app-form-group.message {
+    margin-top: 40px;
+}
+.app-form-buttons {
+    margin-bottom: 0px;
+    text-align: right;
+}
+.app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: #ddd;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.app-form-control::placeholder {
+    color: #666
+}
+.app-form-control:focus {
+    border-bottom-color: #ddd;
+}
+.app-form-button {
+    background-color: transparent;
+    border: none;
+    color:  rgb(160, 59, 218);
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    padding: 10px;
+}
+.app-form-button a {
+    background-color: transparent;
+    border: none;
+    color:  rgb(160, 59, 218);
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+.app-form-button a:hover {
+    color:  rgba(180, 115, 218, 0.884);
+}
+/* Einde Contact */
+/* Footer */
+#footer {
+    background: linear-gradient(60deg, #29323c 0%, #485563 100%); 
+}
+#footer .footer{
+    min-height: 150px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+#footer h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#footer p {
+    color: white;
+    font-size: 1.3rem;
+}
+#footer .logos {
+    display: flex;
+}
+#footer .social-item {
+	height: 50px;
+    width: 50px;
+    flex: 33.33%;
+    padding: 5px;
+}
+#footer .social-item img {
+	filter: grayscale(1);
+	transition: .3s ease filter;
+}
+#footer .social-item:hover img {
+	filter: grayscale(0);
+}
+/* Einde Footer */
+/* Keyframes */
+@keyframes slideIn {
+    from {
+
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes text_reveal {
+    50%{
+        width: 100%;
+        left: 0;
+    }
+
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal1 {
+    100%{
+        color: white;
+    }
+}
+/* Einde Keyframes */
+/* Media iPad */
+@media only screen and (min-width:650px) {
+    .knop {
+        font-size: 1.5rem;
+        padding: 20px 60px;
+    }
+    h1.section-title {
+        font-size: 5rem;
+    }
+    /* Header */
+    #header .hamburger {
+        margin-right: 20px;
+    }
+    /* Einde Header */
+    /* Welkom */
+    #welkom h1 {
+        font-size: 5rem;
+    }
+    /* Einde Welkom */
+    /* Reflectie */
+    #reflectie .reflectie-item {
+        flex-direction: row;
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #reflectie .reflectie-item:nth-child(even) {
+        flex-direction: row-reverse;      
+    }
+    #reflectie .all-reflectie .reflectie-info {
+        height: 100%;
+    }
+    #reflectie .all-reflectie .reflectie-img {
+        height: 100%;
+    }
+    /* Einde Reflectie */
+    /* About */
+    #about .about {
+        flex-direction: row;
+    }
+    #about .col-left {
+        width: 600px;
+        height: 400px;
+        padding-left: 60px;
+    }
+    #about .about .col-left .about-img::after {
+        left: -45px;
+        top: 34px;
+        width: 98%;
+        height: 98%;
+        border: 10px solid  rgb(160, 59, 218);
+    }
+    #about .col-right {
+        text-align: left;
+        padding: 30px;
+    }
+    #about .col-right h1 {
+        text-align: left;
+    }
+    #about .col-right a {
+        text-align: center;
+    }
+    /* Einde About */
+}
+/* Einde Media iPad */
+/* Media Desktop */
+@media only screen and (min-width: 800px) {
+    .knop {
+        font-size: 1.8rem;
+        padding: 20px 60px;
+    }
+    h1.section-title {
+        font-size: 6rem;
+    }
+    /* Header */
+    #header .hamburger {
+        display: none;
+    }
+    #header .nav-list ul {
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #header .nav-list ul li {
+        display: inline-block;
+    }
+    #header .nav-list ul li a {
+        font-size: 1.8rem;
+    }
+    #header .nav-list ul a:after {
+        display: none;
+    }
+    /* Einde Header */
+    /* Welkom */
+    #welkom::after {
+        opacity: 0.7;
+    }
+    #welkom h1 {
+        font-size: 6rem;
+    }
+    /* Einde Welkom */
+}
+/* Einde Media Desktop */
+/* Media Contact */
+@media only screen and (max-width: 600px) {
+    .screen-body {
+        flex-direction: column;
+    }
+    .screen-body-item.left {
+        margin-bottom: 30px;
+    }
+    .app-title {
+        flex-direction: row;
+    }
+    .app-title span {
+        margin-right: 12px;
+    }
+    .app-title:after {
+        display: none;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .screen-body {
+        padding: 40px;
+    }
+    .screen-body-item.left {
+        padding: 0;
+    }
+}
+/* Einde Media Contact */
