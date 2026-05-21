@@ -1,245 +1,273 @@
-<!--Portfolio van Saad Benaissa-->
 <!DOCTYPE html>
-<html lang="nl" data-theme="light">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="language" content="Dutch">
-    <meta name="author" content="Saad Benaissa">
-    <meta name="description" content="Saad Benaisa's Portfolio">
-    <meta name="keywords" content="Saad, Benaissa, Saad Benaissa, Portfolio">
-    <meta name="copyright" content="copyright">
-<title>Portfolio | Saad Benaissa</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Saad Benaissa — Software Developer & AI Enthusiast based in Utrecht, Netherlands." />
+  <meta name="author" content="Saad Benaissa" />
+  <title>Saad Benaissa — Portfolio</title>
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <!-- Header -->
-    <section id="header">
-        <div class="header container">
-            <div class="nav-bar">
-                <div class="brand">
-                    <a href="#welkom"><h1><span>S</span>aad <span>B</span>enaissa</h1></a>
-                </div>
-                <div class="nav-list">
-                    <div class="hamburger"><div class="bar"></div></div>
-                    <ul>
-                        <li><a href="#welkom" data-after="Home">Home</a></li>
-                        <li><a href="#about" data-after="Over">Over mij</a></li>
-                        <li><a href="#projecten" data-after="Projecten">Projecten</a></li>
-                        <li><a href="#reflectie" data-after="Reflectie">Reflectie</a></li>
-                        <li><a href="#contact" data-after="Contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+
+  <!-- Custom cursor -->
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ─── Navigation ─────────────────────────────────────── -->
+  <nav>
+    <a href="#hero" class="nav-logo">Saad Benaissa</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── Hero ───────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
+    <p class="hero-eyebrow">Based in Utrecht, Netherlands</p>
+    <h1 class="hero-name">
+      Software<br />Developer &<br />
+      <em id="scramble-target">AI Enthusiast</em>
+    </h1>
+    <p class="hero-desc">
+      I build digital products that are thoughtful, functional, and built to last.
+      Currently finishing my HBO-AD in ICT at Hogeschool Utrecht, and open to freelance work.
+    </p>
+    <div class="hero-ctas">
+      <a href="#projects" class="btn btn-primary">View my work</a>
+      <a href="#contact" class="btn btn-outline">Get in touch</a>
+    </div>
+    <p class="hero-scroll">Scroll to explore</p>
+  </section>
+
+  <!-- ─── About ──────────────────────────────────────────── -->
+  <section id="about">
+    <div class="about-main reveal">
+      <p class="section-label">About me</p>
+      <h2 class="section-title">Developer with a mind for real-world problems</h2>
+      <p class="about-text">
+        I'm a software developer currently studying ICT at Hogeschool Utrecht. I'm drawn to
+        the intersection of AI and practical tooling — building things that solve genuine
+        problems for real people and organisations.
+      </p>
+      <p class="about-text">
+        I've presented at conferences, worked across multiple internships, and built
+        production-level software used by my own university. My background spans frontend,
+        backend, and AI integration.
+      </p>
+      <p class="about-text">
+        I'm looking for freelance projects and opportunities to collaborate — especially
+        around AI tooling, web applications, and workflow automation.
+      </p>
+      <div class="skills-grid">
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">PHP</span>
+        <span class="skill-tag">HTML / CSS</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">AI Integration</span>
+        <span class="skill-tag">Browser Extensions</span>
+        <span class="skill-tag">REST APIs</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">Git</span>
+      </div>
+    </div>
+
+    <div class="about-aside reveal reveal-delayed">
+      <div class="aside-item">
+        <span class="aside-label">Currently</span>
+        <span class="aside-value">HBO-AD ICT — Hogeschool Utrecht</span>
+      </div>
+      <div class="aside-item">
+        <span class="aside-label">Location</span>
+        <span class="aside-value">Utrecht, Netherlands</span>
+      </div>
+      <div class="aside-item">
+        <span class="aside-label">Focus</span>
+        <span class="aside-value">AI tooling & Web Development</span>
+      </div>
+      <div class="aside-item">
+        <span class="aside-label">Available for</span>
+        <span class="aside-value">Freelance & Collaboration</span>
+      </div>
+      <div class="aside-item">
+        <span class="aside-label">Languages</span>
+        <span class="aside-value">Dutch · English · Arabic</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Projects ───────────────────────────────────────── -->
+  <section id="projects">
+    <div class="projects-inner">
+      <div class="projects-header reveal">
+        <p class="section-label">Selected work</p>
+        <h2 class="section-title">Projects I've built</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Featured -->
+        <article class="project-card featured reveal">
+          <span class="project-badge">Featured — Live project</span>
+          <h3 class="project-title">Kritikos — AI Reflection Browser Extension</h3>
+          <p class="project-desc">
+            A browser extension built from scratch by a student team during our internship
+            at Hogeschool Utrecht. Kritikos helps users reflect critically on how they use
+            AI tools — surfacing patterns, prompting mindful usage, and building digital
+            literacy. Presented at multiple national conferences.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">Browser Extension</span>
+            <span class="project-tag">AI</span>
+            <span class="project-tag">UX Research</span>
+            <span class="project-tag">EdTech</span>
+          </div>
+          <a href="#" class="project-link">View project →</a>
+        </article>
+
+        <!-- Hokage -->
+        <article class="project-card reveal reveal-delayed">
+          <span class="project-badge">Web App</span>
+          <h3 class="project-title">Hokage 2.0</h3>
+          <p class="project-desc">
+            A full-stack login and registration system with a tutorial-style interface,
+            built in PHP. Demonstrates secure authentication patterns and clean UI design.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">PHP</span>
+            <span class="project-tag">MySQL</span>
+            <span class="project-tag">HTML / CSS</span>
+          </div>
+          <a href="https://github.com/saadbenaissa/hokage2.0" class="project-link" target="_blank" rel="noopener">
+            View on GitHub →
+          </a>
+        </article>
+
+        <!-- Portfolio -->
+        <article class="project-card reveal reveal-delayed-2">
+          <span class="project-badge">Portfolio</span>
+          <h3 class="project-title">Personal Portfolio</h3>
+          <p class="project-desc">
+            This site — designed and built from scratch, hosted via GitHub Pages.
+            Clean, focused on showcasing real work over filler content, with
+            JS-powered interactions.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">HTML / CSS</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">GitHub Pages</span>
+          </div>
+          <a href="https://saadbenaissa.github.io" class="project-link">You're already here →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Experience ─────────────────────────────────────── -->
+  <section id="experience">
+    <p class="section-label reveal">Background</p>
+    <h2 class="section-title reveal">Experience & education</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <span class="timeline-year">2024 – Now</span>
+        <div class="timeline-content">
+          <p class="timeline-role">Software Developer Intern</p>
+          <p class="timeline-org">Hogeschool Utrecht</p>
+          <p class="timeline-desc">
+            Built Kritikos — an AI reflection browser extension — from scratch as part of
+            a student team. Presented at national conferences and collaborated directly
+            with university stakeholders.
+          </p>
         </div>
-    </section>
-    <!-- Einde Header -->
-    <!-- Welkom -->
-    <section id="welkom">
-        <div class="welkom container">
-            <div>
-                <h1><b>Welkom<span></span></b></h1>
-                <a href="#about" type="button" class="knop"><b>Leer mij kennen</b></a>
-            </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <span class="timeline-year">2023 – Now</span>
+        <div class="timeline-content">
+          <p class="timeline-role">HBO-AD ICT</p>
+          <p class="timeline-org">Hogeschool Utrecht</p>
+          <p class="timeline-desc">
+            Associate degree in ICT with a focus on software development. Building skills
+            across frontend, backend, AI integration, and agile project delivery.
+          </p>
         </div>
-    </section>
-    <!-- Einde Welkom -->
-    <!-- About -->
-    <section id="about">
-        <div class="about container">
-            <div class="col-left">
-                <div class="about-img">
-                    <img src="images/me1(2).jpg" alt="img">
-                </div>
-            </div>
-            <div class="col-right">
-                <h1 class="section-title">Over <span>mij</span></h1>
-                <h2>Wie ben ik?</h2>
-                <p>
-                    Zoals u uiteraard hebt opgemerkt is mijn naam Saad Benaissa, maar wie ben ik
-                    nou precies? Wat voor studies heb ik gedaan? 
-                </p>
-                <p><b>Klik op de knop hieronder voor mijn CV.</b><br>
-                    <br>
-                   Klik op "<b>Contact</b>", of klik op 1 van de social media logo's onderaan om met mij in contact te komen.</p>
-                <a href="MijnCV/Mijn CV Saad Benaissa.docx" type="button" class="knop" download><b>Download mijn CV</b></a>
-                <br>
-                <a href="#contact" type="button" class="knop"><b>Contact</b></a>
-            </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <span class="timeline-year">2021 – 2023</span>
+        <div class="timeline-content">
+          <p class="timeline-role">MBO ICT (Level 3 & 4)</p>
+          <p class="timeline-org">ROC Midden Nederland & MBO Utrecht</p>
+          <p class="timeline-desc">
+            Completed application development with hands-on projects in web development,
+            databases, and software design.
+          </p>
         </div>
-    </section>
-    <!-- Einde About -->
-    <!-- Projecten -->
-    <section id="projecten">
-        <div class="projecten container">
-            <div class="projecten-top">
-                <h1 class="section-title">Pr<span>o</span>jecten</h1>
-                <p>Hieronder staan de projecten waar ik tot nu toe aan gewerkt heb. </p>
-            </div>
-            <div class="projecten-bottom">
-                <a href="#" target="_blank"><div class="projecten-item" id="radiogaga">
-                    <h2>RadioGaGa</h2>
-                    <p>Mijn 1e school-project.</p>
-                </div></a>
-                <a href="#" target="_blank"><div class="projecten-item" id="technowire">
-                    <h2>TechnoWire</h2>
-                    <p>Mijn 2e school-project. Gemaakt aan de hand van "klantgesprekken" en mijn eigen smaak.</p>
-                </div></a>
-                <a href="#" target="_blank"><div class="projecten-item" id="grid">
-                    <h2>GRID</h2>
-                    <p>Mijn 3e school-project. Gemaakt aan de hand van opdrachten van onze docent en mijn eigen smaak.</p>
-                </div></a>
-                <a href="#" target="_blank"><div class="projecten-item" id="mbo_utrecht">
-                    <h2>MBO Utrecht</h2>
-                    <p>Mijn 4e school-project. Gemaakt aan de hand van "klantgesprekken" en mijn eigen smaak.</p>
-                </div></a>
-            </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <span class="timeline-year">Earlier</span>
+        <div class="timeline-content">
+          <p class="timeline-role">VMBO-kader & Basisschool</p>
+          <p class="timeline-org">Utrecht</p>
+          <p class="timeline-desc">
+            Started coding as a hobby during secondary school. Built early web projects
+            and developed a lasting interest in software and technology.
+          </p>
         </div>
-    </section> 
-    <!-- Einde Projecten -->
-    <!-- Reflectie -->
-    <section id="reflectie">
-        <div class="reflectie container">
-            <div class="reflectie-top">
-                <h1 class="section-title">R<span>e</span>flectie</h1>
-            </div>
-            <div class="all-reflectie">
-                <div class="reflectie-item">
-                    <div class="reflectie-info">
-                        <h1>Kwaliteiten</h1>
-                        <h2>Sociabiliteit</h2>
-                        <p>Ik heb door de tijd heen gemerkt dat ik ervan hou om mensen in mijn buurt te hebben. 
-                            Ik schiet ook best snel op met mensen en ondanks dat de eerste keer
-                            contact te hebben met een onbekende best awkward is, voel ik meestal direct een soort "klik" tussen ons.
-                        </p>
-                    </div>
-                    <div class="reflectie-img">
-                        <img src="images/kwaliteiten1.jpg" alt="img">
-                    </div>
-                </div>
-                <div class="reflectie-item">
-                    <div class="reflectie-info">
-                        <h1></h1>
-                        <h2>Samenwerken</h2>
-                        <p>Wat ik altijd direct aan mezelf merk is dat ik hou van samen werken. Daarbij komt dus ook gezelligheid bij kijken,
-                            ik vind gezelligheid namelijk  erg belangrijk. Zowel op werk als op school werk ik dus graag samen met mensen
-                            zodat we zo ook onze doelen makkelijker en sneller kunnen behalen, en misschien zelfs daarna nog contact houden voor
-                            het geval dat of gewoon voor de gezelligheid.
-                        </p>
-                    </div>
-                    <div class="reflectie-img">
-                        <img src="images/kwaliteiten1.jpg" alt="img">
-                    </div>
-                </div>
-                <div class="reflectie-item">
-                    <div class="reflectie-info">
-                        <h1>Valkuilen</h1>
-                        <h2>Luchtfietserij</h2>
-                        <p>Ik merk wel eens bij mezelf van dat ik een idee krijg om iets te doen of iets op een bepaald manier aan te pakken, maar
-                            dan begin ik er nooit aan of werk ik er voor de helft aan en dan laat ik het weer. 
-                        </p>
-                    </div>
-                    <div class="reflectie-img">
-                        <img src="images/valkuilen.jpg" alt="img">
-                    </div>
-                </div>
-                <div class="reflectie-item">
-                    <div class="reflectie-info">
-                        <h1></h1>
-                        <h2>Besluiteloos</h2>
-                        <p>Ook heb ik gemerkt door de tijd heen en door ervaringen dat wanneer ik aan het brainstormen ben en meerdere (goeie) ideeën heb dat ik
-                            niet weet voor welke idee ik moet kiezen, dit heb ik ook wel eens als ik met anderen aan het brainstormen ben, dat ik dan moeilijk kan 
-                            kiezen welke idee nou het beste is, en zo vaak maar iets random kies en voor het beste hoop.
-                        </p>
-                    </div>
-                    <div class="reflectie-img">
-                        <img src="images/valkuilen.jpg" alt="img">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Einde Reflectie -->
-    <!-- Contact -->
-    <section id="contact">
-        <div class="container1">
-            <div class="screen">
-                <div class="screen-header">
-                    <div class="screen-header-left">
-                        <div class="screen-header-button close"></div>
-                        <div class="screen-header-button maximize"></div>
-                        <div class="screen-header-button minimize"></div>
-                    </div>
-                    <div class="screen-header-right">
-                        <div class="screen-header-ellipsis"></div>
-                        <div class="screen-header-ellipsis"></div>
-                        <div class="screen-header-ellipsis"></div>
-                    </div>
-                </div>
-                <div class="screen-body">
-                    <div class="screen-body-item left">
-                        <div class="app-title">
-                            <span>CONTACTEER</span>
-                            <span>MIJ</span>
-                        </div>
-                        <div class="app-contact"><b>CONTACT INFO : <br>
-                            SAAD.BENAISSA2000@GMAIL.COM<br>
-                            0687839541
-                            <br>
-                            <br>
-                            OF KLIK OP "VERSTUUR".</b>
-                        </div>
-                    </div>
-                    <form name="formulier"
-                    action="mailto: saad.benaissa2000@gmail.com"
-                    method="post">
-                    <div class="screen-body-item">
-                        <div class="app-form">
-                            <div class="app-form-group">
-                                <input class="app-form-control" type="text" name="" placeholder="VOLLEDIGE NAAM">
-                            </div>
-                            <div class="app-form-group">
-                                <input class="app-form-control" type="text" name="" placeholder="E-MAIL">
-                            </div>
-                            <div class="app-form-group">
-                                <input class="app-form-control" type="text" name="" placeholder="TELEFOONNUMMER">
-                            </div>
-                            <div class="app-form-group message">
-                                <input class="app-form-control" type="text" name="" placeholder="BERICHT">
-                            </div>
-                            <div class="app-form-group buttons">
-                                <button class="app-form-button"><a href="#">ANNULEER</a></button>
-                                <button class="app-form-button" type="submit">VERSTUUR</button>
-                            </div>
-                        </div>
-                    </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Einde Contact -->
-    <!-- Footer -->
-    <section id="footer">
-        <div class="footer container">
-            <div class="logos">
-                <div class="social-item">
-                    <a href="https://www.facebook.com/i.am.saad.el/"><img src="images/facebook.jpg"/></a>
-                </div>
-                <div class="social-item">
-                    <a href="https://www.instagram.com/sabt_ad/"><img src="images/instagram.jpg"/></a>
-                </div>
-                <div class="social-item">
-                    <a href="https://www.linkedin.com/in/saad-b-3263a3173/"><img src="images/linkedin.jpg"/></a>
-                </div>
-                <div class="social-item">
-                    <a href="https://discord.gg/PYE5YE9Mj2"><img src="images/discord.jpg"/></a>
-                </div>
-            </div>
-            <p>© 2020: <i><b>Saad Benaissa</b></i>. Alle rechten voorbehouden.</p>
-        </div>
-    </section>
-    <!-- Einde Footer -->
-    <script src="javascript.js"></script>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── Contact ────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="contact-inner reveal">
+      <p class="section-label">Get in touch</p>
+      <h2 class="section-title">Let's work together</h2>
+      <p class="contact-sub">
+        Open to freelance projects, collaborations, and conversations.
+        If you have something in mind, reach out.
+      </p>
+      <a href="mailto:saad.benaissa2000@gmail.com" class="contact-email">
+        saad.benaissa2000@gmail.com
+      </a>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/saadbenaissa/" class="social-link" target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+        <a href="https://github.com/saadbenaissa" class="social-link" target="_blank" rel="noopener">
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Saad Benaissa — Utrecht, Netherlands</p>
+  </footer>
+
+  <!-- Script loaded at end of body so DOM is ready -->
+  <script src="js/main.js"></script>
+
 </body>
 </html>
